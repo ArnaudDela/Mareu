@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.arnaud.mareu.ui.MainActivity">
+    <item
+        android:id="@+id/filtre"
+        android:icon="@drawable/ic_baseline_filter_list_24"
+        android:title="Filtre"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/dateFilter"
+                android:title="@string/dateFilter"
+                />
+            <item
+                android:id="@+id/roomFilter"
+                android:title="@string/roomFilter"
+                />
+        </menu>
+    </item>
+
+</menu>
