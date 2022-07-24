@@ -43,7 +43,31 @@ public class FilterByRoomInstrumentTest {
     public ActivityTestRule<MainActivity> mActivityTestRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    @Test
+    public void filterByPlaceInstrumentedTest() {
+        onView(ViewMatchers.withId(R.id.filtre)).perform(click());
 
+        ViewInteraction appCompatTextView = onView(
+                allOf(withText("Filtrer par salle"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.support.design.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatTextView.perform(click());
+
+        ViewInteraction appCompatButton = onView(
+                allOf(withText("Ok"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.ScrollView")),
+                                        0),
+                                3)));
+        appCompatButton.perform(scrollTo(), click());
+
+        onView(ViewMatchers.withId(R.id.list_meetings)).check(withItemCount(1));
+    }
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

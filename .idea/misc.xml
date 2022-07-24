@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.171" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1735" />
+        <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout-land/activity_add_meeting.xml" value="0.15416666666666667" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/activity_add_meeting.xml" value="0.17831813576494426" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/content_main.xml" value="0.13269927536231885" />
+        <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/lay_land.xml" value="0.33" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/meeting_item.xml" value="0.13269927536231885" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/picker_datetime_dialog.xml" value="0.17831813576494426" />
         <entry key="..\:/Android/Projects/Mareu-master/app/src/main/res/layout/room_spinner_dialog.xml" value="0.17831813576494426" />

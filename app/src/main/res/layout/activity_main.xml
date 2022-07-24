@@ -7,7 +7,24 @@
     tools:context=".ui.MainActivity">
 
 
-    <include layout="@layout/content_main" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_dark_background"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white" />
+
+        <include layout="@layout/content_main" />
+
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_button"

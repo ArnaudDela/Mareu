@@ -38,7 +38,7 @@ public class DeleteMeetingInstrumentTest {
 
 
     // This is fixed
-    private static int ITEMS_COUNT = 2;
+    private static int ITEMS_COUNT = 3;
     @Test
     public void meetingList_deleteAction_shouldRemoveItem() {
         // Given : We remove the element at position selected

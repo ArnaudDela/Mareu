@@ -3,17 +3,20 @@
     package="com.arnaud.mareu">
 
     <application
+        android:name=".Mareu"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mareu">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -21,7 +24,9 @@
         </activity>
 
         <activity
-            android:name=".ui.AddMeetingActivity">
+            android:name=".ui.AddMeetingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeWithActionBar">
         </activity>
     </application>
 

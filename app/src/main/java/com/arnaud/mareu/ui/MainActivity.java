@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements DateTimeDialog.Da
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mApiService = DIMeeting.getMeetingApiService();
+        configureToolbar();
 
 
 
@@ -79,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements DateTimeDialog.Da
             }
         });
 
+    }
+
+    private void configureToolbar() {
+        android.support.v7.widget.Toolbar toolbar = findViewById(R.id.activity_main_toolbar);
+        setSupportActionBar(toolbar);
     }
 
     @Override
@@ -106,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements DateTimeDialog.Da
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }

@@ -78,18 +78,17 @@ public class AddMeetingInstrumentTest {
                 allOf(withId(R.id.spinner_room),
                         childAtPosition(
                                 childAtPosition(
-                                        withId(R.id.activity_add_meeting),
+                                        withId(R.id.layout_add_meeting),
                                         1),
-                                2),
-                        isDisplayed()));
-        appCompatSpinner.perform(click());
+                                2)));
+        appCompatSpinner.perform(scrollTo(), click());
 
         DataInteraction constraintLayout = onData(anything())
                 .inAdapterView(allOf(withClassName(is("com.android.internal.app.AlertController$RecycleListView")),
                         childAtPosition(
                                 withClassName(is("android.widget.FrameLayout")),
                                 0)))
-                .atPosition(2);
+                .atPosition(0);
         constraintLayout.perform(click());
 
         // ajout des collaborateurs
@@ -97,22 +96,16 @@ public class AddMeetingInstrumentTest {
         ViewInteraction appCompatMultiAutoCompleteTextView = onView(
                 allOf(withId(R.id.collaborators_picker),
                         childAtPosition(
-                                allOf(withId(R.id.activity_add_meeting),
+                                allOf(withId(R.id.layout_add_meeting),
                                         childAtPosition(
-                                                withId(android.R.id.content),
+                                                withId(R.id.activity_add_meeting),
                                                 0)),
-                                3),
-                        isDisplayed()));
+                                3)));
         appCompatMultiAutoCompleteTextView.perform(replaceText("arnaud@lamzone.com, sarra@lamzone.com"));
 
-        // selection de la date et du time
+        // selection de la date et de l'heure
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.select_date_time), withText("Date et heure"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.activity_add_meeting),
-                                        4),
-                                1),
+                allOf( withText("Date et heure"),
                         isDisplayed()));
         appCompatButton.perform(click());
 
@@ -126,13 +119,7 @@ public class AddMeetingInstrumentTest {
         appCompatButton2.perform(scrollTo(), click());
 
         ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.create), withText("Save Meeting"),
-                        childAtPosition(
-                                allOf(withId(R.id.activity_add_meeting),
-                                        childAtPosition(
-                                                withId(android.R.id.content),
-                                                0)),
-                                5),
+                allOf(withText("Save Meeting"),
                         isDisplayed()));
         appCompatButton3.perform(click());
 
